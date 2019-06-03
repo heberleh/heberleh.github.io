@@ -1,59 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Portfolios on Timer | Responsive Multipurpose Bootstrap Hugo Template</title>
+    <title>About Us on | Henry Heberle</title>
     <link>https://heberleh.github.io/portfolio/</link>
-    <description>Recent content in Portfolios on Timer | Responsive Multipurpose Bootstrap Hugo Template</description>
+    <description>Recent content in About Us on | Henry Heberle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Jul 2018 16:59:54 +0600</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jul 2018 18:19:33 +0600</lastBuildDate>
     
 	<atom:link href="https://heberleh.github.io/portfolio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Caramel Bottle</title>
-      <link>https://heberleh.github.io/portfolio/interactivenn/</link>
-      <pubDate>Thu, 12 Jul 2018 16:59:54 +0600</pubDate>
-      
-      <guid>https://heberleh.github.io/portfolio/interactivenn/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Shopping Bag Concept</title>
-      <link>https://heberleh.github.io/portfolio/test/</link>
-      <pubDate>Thu, 12 Jul 2018 16:58:55 +0600</pubDate>
-      
-      <guid>https://heberleh.github.io/portfolio/test/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Makeup Element</title>
-      <link>https://heberleh.github.io/portfolio/vispipeline-multinetwork/</link>
-      <pubDate>Thu, 12 Jul 2018 16:57:54 +0600</pubDate>
-      
-      <guid>https://heberleh.github.io/portfolio/vispipeline-multinetwork/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Bottle Mockup</title>
+      <title>CellNetVis</title>
       <link>https://heberleh.github.io/portfolio/cellnetvis/</link>
-      <pubDate>Thu, 12 Jul 2018 16:54:54 +0600</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://heberleh.github.io/portfolio/cellnetvis/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Dew Drop</title>
-      <link>https://heberleh.github.io/portfolio/vispipeline-graph/</link>
-      <pubDate>Thu, 12 Jul 2018 16:53:54 +0600</pubDate>
-      
-      <guid>https://heberleh.github.io/portfolio/vispipeline-graph/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+      <description>&lt;p&gt;CellNetVis is a web-tool for protein-protein network visualization and exploration. Its scientific article resulted in the &lt;b&gt;Best Paper Award&lt;/b&gt; offered by the BIOVIS 2017, in Prague. With this tool, biologists can explore the functional and structural mechanisms of a biological system by visualizing and exploring a biological network.&lt;/p&gt;&lt;p&gt;For me, the main elements that makes this tool sucessful and important are its simplicity, flexibility and design. During this project, I focused on the needs of users that usually have small networks and are not &lt;i&gt;computer experts&lt;/i&gt;. At the same time, it can handle more specific needs, such as the visualization of large networks and set up of the force directed layout.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
