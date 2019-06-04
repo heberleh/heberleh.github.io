@@ -17,7 +17,17 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://heberleh.github.io/portfolio/cellnetvis/</guid>
-      <description>&lt;p&gt;CellNetVis is a web-tool for protein-protein network visualization and exploration. Its scientific article resulted in the &lt;b&gt;Best Paper Award&lt;/b&gt; offered by the BIOVIS 2017, in Prague. With this tool, biologists can explore the functional and structural mechanisms of a biological system by visualizing and exploring a biological network.&lt;/p&gt;&lt;p&gt;For me, the main elements that makes this tool sucessful and important are its simplicity, flexibility and design. During this project, I focused on the needs of users that usually have small networks and are not &lt;i&gt;computer experts&lt;/i&gt;. At the same time, it can handle more specific needs, such as the visualization of large networks and set up of the force directed layout.&lt;/p&gt;
+      <description>&lt;p&gt;CellNetVis is a web-tool for protein-protein network visualization and exploration. Its scientific article resulted in the &lt;b&gt;Best Paper Award&lt;/b&gt; during the BIOVIS 2017, in Prague. With this tool, biologists can explore the functional and structural mechanisms of a biological system by visualizing and exploring a biological network.&lt;/p&gt;&lt;p&gt;For me, the main elements that makes this tool sucessful and important are its simplicity, flexibility and design. During this project, I focused on the needs of users that usually have small networks and are not &lt;i&gt;computer experts&lt;/i&gt;. At the same time, it can handle more specific needs, such as the visualization of large networks and set up of the force directed layout.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>InteractiVenn</title>
+      <link>https://heberleh.github.io/portfolio/interactivenn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/interactivenn/</guid>
+      <description>&lt;p&gt;InteractiVenn is a web-system for the visual analysis of lists of elements through Venn diagrams. Its main feature is the capability of allowing union operations between sets while keeping the visual map of the diagram. That is, when we perform the union of 2 sets, instead of going from a diagram with 3 circles to a diagram with 2 circles, we maintain the layout and apply the union to the shapes as well.&lt;/p&gt; &lt;p&gt;The published article was considered highly cited already in its initial 1-2 years. The tool have many access daily and facilitate the analysis of many scientist and other professionals. I think what makes this tool incredible is its simplicity and clean design, easy to use and extremely usefull.&lt;/p&gt;
 </description>
     </item>
     
