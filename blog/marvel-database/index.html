@@ -40,6 +40,12 @@
 
 <body>
 
+    
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>    
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <section class="top-bar animated-header">
     <div class="container">
         <div class="row">
@@ -246,8 +252,23 @@ We can do the same thing for ANY Wikipedia page. Go to the official Wikipedia we
 </span><span style="color:#75715e"></span>            <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">result</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">name</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">equal</span>(<span style="color:#e6db74">&#34;Phoenix Force&#34;</span>)
         });
 </code></pre></div>
-<p>The above <code>SELECT</code> returns the column <code>charLabel</code> and renames to <code>name</code>. It also joins the tables character, gender and abilities, making sure the entries have the same character id (<code>char</code>). Finally, it filters by a specific gender named <em>agender</em>. For more examples on this database, please go to the <a href="https://github.com/heberleh/comics-characters-js-database">Github page</a> - don&rsquo;t forget to star it :)
+<p>The above <code>SELECT</code> returns the column <code>charLabel</code> and renames to <code>name</code>. It also joins the tables character, gender and abilities, making sure the entries have the same character id (<code>char</code>). Finally, it filters by a specific gender named <em>agender</em>. For more examples on this database, please go to the <a href="https://github.com/heberleh/comics-characters-js-database">Github page</a> - don&rsquo;t forget to star it :)</p>
+
+<p><br>
 <br></p>
+
+<div style={{textAlign: 'right'}}>
+    <div class="social">
+        <span class="twitter">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+        </span>
+        <span class="Facebook">
+        <span class="fb-share-button" data-href="https://heberleh.github.io/comics-universe/" data-layout="button_count" data-size="small">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fheberleh.github.io%2Fcomics-universe%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+        </span>
+        </span>
+    </div>
+</div>
 
                     <p style="text-align: right">Henry Heberle, PhD.</p>
                     <p style="text-align: right">Data Visualization Engineer / Data Scientist</p>
