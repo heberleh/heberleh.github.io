@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>React &amp; D3 stacked bar charts using the Comics Database</title>
-      <link>https://heberleh.github.io/blog/integrating-d3-and-react/</link>
-      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://heberleh.github.io/blog/integrating-d3-and-react/</guid>
-      <description>This article is for who knows a bit of D3 and want to code in a React fashion. If you have no idea on how to code using React, I strongly recomend this 100% free interactive course on Scrimba. Here I show you how I created a stacked bar chart with tooltips to visualize one table from my easy javascript  Comics Database. I point out what are the core code-parts that make this version different from a regular D3 version based on enter(), exit() and update().</description>
-    </item>
-    
-    <item>
       <title>Create a Marvel Database with SQL and Javascript - the easy way</title>
       <link>https://heberleh.github.io/blog/marvel-database/</link>
       <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="description" content="This post explains how to integrate D3 and React to create a bar chart and a stacked bar chart with tooltips. I used the the Marvel/DC/Comics database that I explained how to create in the last blog post. Here, I explain the main keys that are different from a regular D3 workflow and exemplify the use of my Comics Database.">
+    <meta name="author" content="Henry Heberle">
+    <meta name="generator" content="Hugo 0.55.6" />
+    
+    <!-- Mobile Specific Metas -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React & D3 stacked bar charts using the Comics Database</title>
+    <link rel="icon" href="https://heberleh.github.io/images/favicon.ico">
+
+    <!-- Twitter Bootstrs CSS -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/bootstrap/bootstrap.min.css">
+    <!-- Ionicons Fonts Css -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/ionicons/ionicons.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/animate-css/animate.css">
+    <!-- Hero area slider css-->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/slider/slider.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/slick/slick.css">
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/facncybox/jquery.fancybox.css">
+    <!-- hover -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/hover/hover-min.css">
+    <!-- template main css file -->
+    
+    <link rel="stylesheet" href="https://heberleh.github.io/css/style.min.css" integrity="" media="screen">
+    <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5cfbbff74351e9001264fc80&product=inline-follow-buttons"></script>
+
+    <script defer src= "https://heberleh.github.io/plugins/fontawesome-free-5.9.0-web/js/all.js"></script>
+
+</head>
+
+<body>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>    
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<section class="top-bar animated-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="https://heberleh.github.io">
+                        
+                        <p class='logo'><b>H</b>enry <b>H</b>eberle, PhD</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://heberleh.github.io">Home</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="/publications">Publications</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="/blog">Blog</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Contact</a>
+                            </li>
+                            
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>React & D3 stacked bar charts using the Comics Database</h2>
+                    <div class="portfolio-meta">
+                        <span>Wednesday, Jun 12, 2019</span>|
+                        <span> Tags:
+                            react, d3js, javascript, bar chart, sql, comics
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="single-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                
+                <div class="post-img post-img-list">
+                    <img class="img-fluid" alt="" src="https://heberleh.github.io/images/blog/react-d3-barcharts/main.png">
+                </div>
+                
+                
+                <div class="post-content">
+                    
+
+<p>This article is for who knows a bit of <strong>D3</strong> and want to code in a <strong>React</strong> fashion. If you have no idea on how to code using React, I strongly recomend this 100% free interactive <a href="https://scrimba.com/g/glearnreact">course</a> on Scrimba. <strong>Here</strong> I show you how I created a <strong>stacked bar chart</strong> with tooltips to visualize one table from my easy javascript <a href="/blog/marvel-database/"><i class='fas fa-database'></i> Comics Database</a>. I point out what are the core code-parts that make this version different from a regular D3 version based on <code>enter()</code>, <code>exit()</code> and <code>update()</code>. The article is structured as follows:</p>
+
+<ol>
+<li><a href="#1-comics-data">Comics Data</a></li>
+<li><a href="#2-react-components">React Components</a></li>
+<li><a href="#3-tooltips">Tooltips</a></li>
+</ol>
+
+<p><strong>Github repository</strong>: <a href="https://github.com/heberleh/learn-react-d3/">https://github.com/heberleh/learn-react-d3/</a></p>
+
+<h2 id="1-comics-data">1. Comics Data</h2>
+
+<p>I want a plot to show how many characters have each ability (bar size) and how this number is distributed among genders (colors). We will be able to check how many abilities are registered, and how frequently they are explored by comics authors.
+To achive it I queried a table from my <a href="/blog/marvel-database/">easy javascript Comics Database</a> containing the following information:</p>
+
+<ul>
+<li>Character</li>
+<li>Abilities</li>
+<li>Gender</li>
+</ul>
+
+<p>To use this database you just need to download some .js and .json files, then you can query using SQL commands. Here is my <code>SELEC</code> command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`SELECT LOWER (a.abilityLabel) AS abilityLabel,</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                            a.abilityDescription   AS description,</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                            LOWER (g.genderLabel)  AS genderLabel,</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                            COUNT(c.char)          AS total</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                     FROM character c
+</span><span style="color:#e6db74">                            JOIN      abilities a ON a.char = c.char</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                            LEFT JOIN gender    g ON c.char = g.char</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                     GROUP BY LOWER (a.abilityLabel), a.abilityDescription, LOWER (g.genderLabel)</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                     ORDER BY abilityLabel`</span>
+
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">comicsDB</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#a6e22e">query</span>)
+</code></pre></div>
+<p>I also did some data manipulation after quering, so that my data model have:</p>
+
+<ul>
+<li><code>labels</code> vector: the genders labels</li>
+<li><code>data</code>: one vector for each ability containing a vector of total of characters per gender, indexed according to <code>labels</code></li>
+</ul>
+
+<p>Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">labels</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;male&#39;</span>,<span style="color:#e6db74">&#39;female&#39;</span>]
+        <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> [
+            {<span style="color:#e6db74">&#39;ability&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;strengh&#39;</span>, <span style="color:#e6db74">&#39;values&#39;</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>]}, <span style="color:#75715e">// vis: convert &#39;values&#39; to one bar with 2 stacked rectangles
+</span><span style="color:#75715e"></span>            {<span style="color:#e6db74">&#39;ability&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;fligh&#39;</span>, <span style="color:#e6db74">&#39;values&#39;</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>]},
+            {<span style="color:#e6db74">&#39;ability&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;jump&#39;</span>, <span style="color:#e6db74">&#39;values&#39;</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>]}
+        ]
+    }
+</code></pre></div>
+<p>Check out the <code>skillsDistributionByGender()</code> complete code <a href="https://github.com/heberleh/learn-react-d3/blob/master/src/ComicsQueries.js">here</a>.</p>
+
+<h2 id="2-react-components">2. React Components</h2>
+
+<p>After defining my data, I started creating a simple Bar Chart based on <a href="https://medium.com/@caspg/responsive-chart-with-react-and-d3v4-afd717e57583">this post and code by Kacper Goliński</a>. If you did not create any chart using React and D3, you may find it easier starting with a simple bar chart there and then come back to check how I did the stacked one and how I added tooltips.</p>
+
+<p>There are different approaches to integrade D3 and React. The fisrt approach is to control our App using React but still use D3 to controll the SVG elements using <em>enter(), update() and exit()</em>. A second approach is to controll all the SVG elements using React, which makes more sense to a React app. Therefore, instead of calling <code>.attr('width', 200)</code> we are are going to set it directly to the component or SVG element like in this example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">        <span style="color:#75715e">// At this point of code we have one row of our data
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// We have the labels (genders) and the values (for each gender)
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// The result is one bar with the stacked rectagles
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// This is repeated for each row (ability)
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">values</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">val</span>, <span style="color:#a6e22e">i</span>) =&gt;
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">rect</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">title</span><span style="color:#f92672">+</span><span style="color:#a6e22e">labels</span>[<span style="color:#a6e22e">i</span>]<span style="color:#f92672">+</span><span style="color:#a6e22e">i</span>}  
+                <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">margins</span>.<span style="color:#a6e22e">left</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">getX</span>(<span style="color:#a6e22e">i</span>)}  
+                <span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">xScale</span>(<span style="color:#a6e22e">val</span>)}  
+                <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">yScale</span>(<span style="color:#a6e22e">dataModel</span>.<span style="color:#a6e22e">bandFunc</span>(<span style="color:#a6e22e">d</span>))}
+                <span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">yScale</span>.<span style="color:#a6e22e">bandwidth</span>()}
+                <span style="color:#a6e22e">fill</span> <span style="color:#f92672">=</span> {<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">colorScale</span>(<span style="color:#a6e22e">labels</span>[<span style="color:#a6e22e">i</span>])}
+            <span style="color:#f92672">/&gt;</span>
+        )
+</code></pre></div>
+<p>This code will return our <code>rect</code> elements, which we are going to put inside a <code>&lt;g&gt;</code> to group rectangles of each bar/ability. Therefore, we can add it to a function and call it for each ability, as coded here:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">        &lt;<span style="color:#f92672">g</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;allBars&#34;</span>&gt;{
+            <span style="color:#a6e22e">dataModel</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">d</span> =&gt; &lt;<span style="color:#f92672">g</span>&gt;{
+                                        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">renderStackedBar</span>(<span style="color:#a6e22e">d</span>) <span style="color:#75715e">// calls a function that creates |labels| rectangles
+</span><span style="color:#75715e"></span>                                    }&lt;/<span style="color:#f92672">g</span>&gt;)
+        }&lt;/<span style="color:#f92672">g</span>&gt;</code></pre></div>
+<p>This code will create a <code>&lt;g&gt;</code> for each ability and a final <code>&lt;g&gt;</code> with all the bars that form the chart. All this can be coded in a React component, like I did in my <code>&lt;StackedBars /&gt;</code> on <a href="https://github.com/heberleh/learn-react-d3/blob/master/src/components/Bars/StackedBars.js">github</a>.</p>
+
+<p>Initially, I created both x and y axes, but I realized it is not necessary for my chart. I let the y-axis as it was, only ommiting the <code>path</code> and <code>line</code> elements using CSS style <code>stroke-opacity: 0</code>. The x-axis I removed by just commenting the React component call.</p>
+
+<p>Despite that, <strong>this is the second important case of React &amp; D3 integration</strong> because the d3.axis function needs the SVG element to draw in. It means that we cannot call <code>d3.axis</code> and get an SVG element that we will return in our React component as we did in the last example.</p>
+
+<p>In this case, we need to give D3 the DOM controll temporary. For that, we in fact select the element that refers to our current component and tell D3 to work into it. Here is an example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">        <span style="color:#a6e22e">componentDidMount</span>() {
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">renderAxis</span>()
+        }
+
+        <span style="color:#a6e22e">componentDidUpdate</span>() {
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">renderAxis</span>()
+        }
+
+        <span style="color:#a6e22e">renderAxis</span>(){
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">axisType</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`axis</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">orient</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">axis</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3Axis</span>[<span style="color:#a6e22e">axisType</span>]()
+                    .<span style="color:#a6e22e">scale</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">scale</span>)
+                    .<span style="color:#a6e22e">tickSize</span>(<span style="color:#f92672">-</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">tickSize</span>)
+                    .<span style="color:#a6e22e">tickPadding</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">tickPadding</span>)
+                    .<span style="color:#a6e22e">ticks</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">ticks</span>)
+
+            <span style="color:#a6e22e">d3Select</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">axisElement</span>).<span style="color:#a6e22e">call</span>(<span style="color:#a6e22e">axis</span>)
+        }
+
+        <span style="color:#a6e22e">render</span>(){
+            <span style="color:#66d9ef">return</span> (
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">g</span>
+                <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#e6db74">`Axis Axis-</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">orient</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> Axis-</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">scale</span>.<span style="color:#a6e22e">type</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>}
+                <span style="color:#a6e22e">ref</span><span style="color:#f92672">=</span>{(<span style="color:#a6e22e">el</span>) =&gt; { <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">axisElement</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">el</span>; }}
+                <span style="color:#a6e22e">transform</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">translate</span>}
+            <span style="color:#f92672">/&gt;</span>
+            )
+        }
+</code></pre></div>
+<p>We set our Axis node with <code>ref={(el) =&gt; { this.axisElement = el; }}</code> (see above), then we select it with D3 and call the D3 axis function like in here <code>d3.select(this.axisElement).call(axis)</code>, which will append the axis elements.</p>
+
+<p>The above example will draw the axis inside the <code>&lt;g&gt;</code> element, and we are returning it all to the parent component after rendered. &ldquo;<code>ref</code> updates happen before componentDidMount or componentDidUpdate lifecycle methods&rdquo;- <a href="https://reactjs.org/docs/refs-and-the-dom.html">documentation</a>; therefore, first our code executes <code>this.axisElement = el</code> and then <code>renderAxis()</code>.</p>
+
+<p>In conclusion, we defined the 2 main approaches to creating SVG interactive visualizations using React and D3:</p>
+
+<ol>
+<li><strong>declaratively</strong>: you control the svg elements;</li>
+<li><strong>refs</strong>: giving D3 the control over an specific referenced node.</li>
+</ol>
+
+<p>The 1st is prefered and the 2nd should be avoid as much as you can, according to the React <a href="https://reactjs.org/docs/refs-and-the-dom.html">documentation</a>. If a function in D3 returns the SVG elements, you can just use the result declaratively (not using ref), if not, <code>ref</code> seems to be the only way to avoid the enter, exit and update functions.</p>
+
+<p>Please leave your comments about any of these integration topics or possible improvements.</p>
+
+<p>At this point, our chart component should look like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx">        &lt;<span style="color:#f92672">svg</span>
+            <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">{props.width}</span>
+            <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">{props.height}</span>&gt;
+
+            &lt;<span style="color:#f92672">Axes</span>
+                <span style="color:#a6e22e">scales</span><span style="color:#f92672">=</span><span style="color:#e6db74">{{xScale,</span> <span style="color:#a6e22e">yScale</span>}}
+                <span style="color:#a6e22e">margins</span><span style="color:#f92672">=</span><span style="color:#e6db74">{props.margins}</span>
+                <span style="color:#a6e22e">svgDimensions</span><span style="color:#f92672">=</span><span style="color:#e6db74">{{width:props.width,</span> <span style="color:#a6e22e">height</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#a6e22e">props.height</span>}}
+                <span style="color:#a6e22e">ticks</span><span style="color:#f92672">=</span><span style="color:#e6db74">{ticks}</span>
+                <span style="color:#a6e22e">dataModel</span><span style="color:#f92672">=</span><span style="color:#e6db74">{props.dataModel}</span>
+            /&gt;
+
+            &lt;<span style="color:#f92672">StackedBars</span>
+                <span style="color:#a6e22e">scales</span><span style="color:#f92672">=</span><span style="color:#e6db74">{{xScale,</span> <span style="color:#a6e22e">yScale</span>}}
+                <span style="color:#a6e22e">margins</span><span style="color:#f92672">=</span><span style="color:#e6db74">{props.margins}</span>
+                <span style="color:#a6e22e">dataModel</span><span style="color:#f92672">=</span><span style="color:#e6db74">{props.dataModel}</span>
+                <span style="color:#a6e22e">maxValue</span><span style="color:#f92672">=</span><span style="color:#e6db74">{maxValue}</span>
+                <span style="color:#a6e22e">svgDimensions</span><span style="color:#f92672">=</span><span style="color:#e6db74">{{width:props.width,</span> <span style="color:#a6e22e">height</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#a6e22e">props.height</span>}}
+            /&gt;
+
+            <span style="color:#75715e">// This one comes in the next section: Tooltips
+</span><span style="color:#75715e"></span>            &lt;<span style="color:#f92672">ReactTooltip</span>
+                    <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;barTooltipStackedBarChart&#39;</span>
+                    <span style="color:#a6e22e">html</span><span style="color:#f92672">=</span><span style="color:#e6db74">{true}</span>
+                    <span style="color:#a6e22e">border</span><span style="color:#f92672">=</span><span style="color:#e6db74">{true}/</span>&gt;
+        &lt;/<span style="color:#f92672">svg</span>&gt;</code></pre></div>
+<h2 id="3-tooltips">3. Tooltips</h2>
+
+<p><img class="img-fluid" style="margin: 20px" src="../../images/blog/marvel-database/wiki-item-property.png"></p>
+
+<p><br>
+<br></p>
+
+<div>
+    <div class="social">
+        <span class="twitter">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+        </span>
+        <span class="Facebook">
+            <div class="fb-share-button" data-href="https://heberleh.github.io/blog/integrating-d3-and-react/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fheberleh.github.io%2Fblog%2Fintegrating-d3-and-react%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        </span>
+    </div>
+</div>
+
+                    <p style="text-align: right">Henry Heberle, PhD.</p>
+                    <p style="text-align: right">Data Visualization Engineer / Data Scientist</p>
+                    <div class="sharethis-inline-follow-buttons"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Call To Action Section Start -->
+<section id="call-to-action">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
+                    <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Let me know if I can help you in any way. I am open to colaboarions and I am currently looking for a job in Canada.</p>
+                    <a href="/contact" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact with me</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Call To Action Section End -->
+
+
+<!-- Footer Section Start -->
+<footer id="footer">
+    <div class="container">
+        <div class="row content-justify-between">
+            <div class="col-md-8 col-12 text-center text-lg-left text-md-left">
+                <p class="copyright">Copyright:
+                    <span>
+                        <script>document.write(new Date().getFullYear())</script>
+                    </span> <b>Henry Heberle</b>.
+                    <br> Powered by  <a href="http://www.Themefisher.com" target="_blank">Themefisher</a> and <a href="https://gohugo.io/">Hugo</a>.
+                </p>
+            </div>
+            <div class="col-md-4 col-12">
+                <!-- Social Media -->
+                <ul class="social text-center text-md-right text-lg-right">
+                    
+                    <li>
+                        <a href="https://twitter.com/h_heberle" class="twitter">
+                            <i class="ion-social-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/enryh/" class="linkedin">
+                            <i class="ion-social-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/heberleh" class="github">
+                            <i class="ion-social-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer section end -->
+
+<!-- jquery -->
+<script src="https://heberleh.github.io/plugins/jQurey/jquery.min.js"></script>
+<!-- Form Validation -->
+<script src="https://heberleh.github.io/plugins/form-validation/jquery.form.js"></script>
+<script src="https://heberleh.github.io/plugins/form-validation/jquery.validate.min.js"></script>
+<!-- slick slider -->
+<script src="https://heberleh.github.io/plugins/slick/slick.min.js"></script>
+<!-- bootstrap js -->
+<script src="https://heberleh.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- wow js -->
+<script src="https://heberleh.github.io/plugins/wow-js/wow.min.js"></script>
+<!-- slider js -->
+<script src="https://heberleh.github.io/plugins/slider/slider.js"></script>
+<!-- Fancybox -->
+<script src="https://heberleh.github.io/plugins/facncybox/jquery.fancybox.js"></script>
+<!-- template main js -->
+
+<script src="https://heberleh.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+
+</html>
