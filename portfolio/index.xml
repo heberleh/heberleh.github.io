@@ -71,15 +71,6 @@
     </item>
     
     <item>
-      <title>Recursive Feature Addition</title>
-      <link>https://heberleh.github.io/portfolio/rfa/</link>
-      <pubDate>Wed, 31 Dec 1969 20:33:35 -0400</pubDate>
-      
-      <guid>https://heberleh.github.io/portfolio/rfa/</guid>
-      <description>RFA or Recursive Feature Addition is a tool I implemented to substitute the RFE (recursive feature elimination). It has shown to be more accurate and stable than RFE when the variables are correlated and you still need them to participate in the feature selection process. RFA was tested in the context of cancer biomarkers in Discovery Proteomics.</description>
-    </item>
-    
-    <item>
       <title>VisPipeline-MultiNetwork</title>
       <link>https://heberleh.github.io/portfolio/multinetwork/</link>
       <pubDate>Wed, 31 Dec 1969 20:33:34 -0400</pubDate>
