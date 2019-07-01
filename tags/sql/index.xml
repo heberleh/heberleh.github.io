@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sql on | Henry Heberle</title>
+    <link>https://heberleh.github.io/tags/sql/</link>
+    <description>Recent content in sql on | Henry Heberle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://heberleh.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React &amp; D3 stacked bar charts using the Comics Database</title>
+      <link>https://heberleh.github.io/blog/integrating-d3-and-react/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/blog/integrating-d3-and-react/</guid>
+      <description>This article is for who knows a bit of D3 and want to code in a React fashion. If you have no idea on how to code using React, I strongly recomend this 100% free interactive course on Scrimba. Here I show you how I created a stacked bar chart with tooltips to visualize one table from my easy javascript  Comics Database. I point out what are the core code-parts that make this version different from a regular D3 version based on enter(), exit() and update().</description>
+    </item>
+    
+    <item>
+      <title>Create a Marvel Database with SQL and Javascript - the easy way</title>
+      <link>https://heberleh.github.io/blog/marvel-database/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/blog/marvel-database/</guid>
+      <description>I know, the image above is mostly about DC, but this post is not only about Marvel and Lena Rose did a great job taking this picture.
+In this post I explain how to create a Marvel Database (or a DC Database). For that, we will query data from Wikipedia and integrate it using Javascript and SQL. We will make a flexible tool that will allow you to create different tables to use in your projects.</description>
+    </item>
+    
+  </channel>
+</rss>

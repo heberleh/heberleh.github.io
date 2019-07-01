@@ -6,36 +6,73 @@
     <description>Recent content on | Henry Heberle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Jul 2018 16:56:54 +0600</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://heberleh.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Table Design</title>
-      <link>https://heberleh.github.io/blog/a-tool-for-multidimensional-projection-assessment/</link>
-      <pubDate>Thu, 12 Jul 2018 16:56:54 +0600</pubDate>
+      <title>React &amp; D3 stacked bar charts using the Comics Database</title>
+      <link>https://heberleh.github.io/blog/integrating-d3-and-react/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://heberleh.github.io/blog/a-tool-for-multidimensional-projection-assessment/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+      <guid>https://heberleh.github.io/blog/integrating-d3-and-react/</guid>
+      <description>This article is for who knows a bit of D3 and want to code in a React fashion. If you have no idea on how to code using React, I strongly recomend this 100% free interactive course on Scrimba. Here I show you how I created a stacked bar chart with tooltips to visualize one table from my easy javascript  Comics Database. I point out what are the core code-parts that make this version different from a regular D3 version based on enter(), exit() and update().</description>
     </item>
     
     <item>
-      <title>How To Setup Timer Hugo</title>
-      <link>https://heberleh.github.io/blog/installation/</link>
-      <pubDate>Sun, 08 Jul 2018 12:22:40 +0600</pubDate>
+      <title>Create a Marvel Database with SQL and Javascript - the easy way</title>
+      <link>https://heberleh.github.io/blog/marvel-database/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://heberleh.github.io/blog/installation/</guid>
-      <description>Install this template by following those simple steps: STEP-1 : Hugo installation Check this link below for install hugo on your computer. hugo install documentation
-STEP-2 : Create your project Hugo provides a new command to create a new website.
-hugo new site &amp;lt;new_project&amp;gt;  STEP-3 : Install the theme Run this command
-hugo new site timer-hugo  and then go to the themes folder inside of timer-hugo folder. You can also use this command cd timer-hugo/themes for going to this folder.</description>
+      <guid>https://heberleh.github.io/blog/marvel-database/</guid>
+      <description>I know, the image above is mostly about DC, but this post is not only about Marvel and Lena Rose did a great job taking this picture.
+In this post I explain how to create a Marvel Database (or a DC Database). For that, we will query data from Wikipedia and integrate it using Javascript and SQL. We will make a flexible tool that will allow you to create different tables to use in your projects.</description>
+    </item>
+    
+    <item>
+      <title>Feature Selection &amp; Stability</title>
+      <link>https://heberleh.github.io/portfolio/proteins-stability/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/proteins-stability/</guid>
+      <description>&lt;p&gt;In this project I proposed the use of frequency of features (proteins) in good positions in ranks as an approach for feature selection in the context of Discovery Proteomics for Biomarkers research. These field usually have high-dimensional dataset with a much smaller number of samples.&lt;/p&gt;&lt;p&gt;I have used controlled samples in which proteins were added in different concentrations in different conditions: cancer, tumor removed and no-cancer. The biological experiments were developed by our collaborators from the Brazilian Bioscience National Laboratory. Proteins had their intensities quantified through Discovery Proteomics methods.&lt;/p&gt;&lt;p&gt;My method was capable of selecting the true markers and reveal information about instability of Discovery Proteomics and feature selection methods applied to this type of data. Visualization is of great importance for this category of work, once the experts are fundamental key and need to take decisions considering the high probability of bias and false discovery rate caused by the contrast between the number of samples and the number of variables in the dataset.&lt;/p&gt;&lt;p&gt;All results and research done is reported in my Doctoral dissertation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Feature Selection, ML &amp; Stats</title>
+      <link>https://heberleh.github.io/portfolio/secretome/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/secretome/</guid>
+      <description>&lt;p&gt;In this project I implemented a pipeline in R to rank and select proteins based on three different Machine Learning ranking approaches: multivariate, univariate and semi-multivariate. The methods were SVM-RFE, Beta-Binomial and NSC. The project was developed in colaboration with the Brazilian Biosciences National Laboratory and experts from different fields. &lt;/p&gt;&lt;p&gt; The dataset was a result from a Discovery Proteomics quantification, which resulted in a high number of variables and low number of samples. For this reason, we implemented the  multivariate and semi-multivariate classifiers/rankers in a Double Cross Validation scheme.&lt;/p&gt;&lt;p&gt;Multidimensional projection and trees visualization helped us to understand the data and the results.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Feature Selection &amp; Biomarkers</title>
+      <link>https://heberleh.github.io/portfolio/nature/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:38 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/nature/</guid>
+      <description>&lt;p&gt;In this project we evaluated proteins candidates for oral cancer biormarkers. Among many analysis and approaches involving discovery and targeted proteomics, in collaboration with the Brazilian Bioscience National Laboratory, I applied statistical and machine learning tools to evaluate the power of potential proteins and peptides candidates signatures to discriminate the N0/N+ oral cancer conditions explained in the article.&lt;/p&gt;&lt;p&gt;Our work was published in Nature Communications and appeared on radio, tv and magazines, and received an award for innovation integrating Computer Science methods and Biology for Health.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Supertrees Visualization</title>
+      <link>https://heberleh.github.io/portfolio/supertrees/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:38 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/supertrees/</guid>
+      <description>I developed sTVis during an internship at Dalhousie University (Halifax, Canada) under supervision of professor Dr. Robet Beiko. The web-system allows the user to explore a phylogenetic tree (supertree) by exploring the edges that connect the internal nodes. Each edge may represent shared genes and &lt;a href=&#39;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4055872/&#39;&gt;SPR moves&lt;/a&gt;.</description>
     </item>
     
     <item>
       <title>CellNetVis</title>
       <link>https://heberleh.github.io/portfolio/cellnetvis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Dec 1969 20:33:37 -0400</pubDate>
       
       <guid>https://heberleh.github.io/portfolio/cellnetvis/</guid>
       <description>&lt;p&gt;CellNetVis is a web-tool for protein-protein network visualization and exploration. Its scientific article resulted in the &lt;b&gt;Best Paper Award&lt;/b&gt; during the BIOVIS 2017, in Prague. With this tool, biologists can explore the functional and structural mechanisms of a biological system by visualizing and exploring a biological network.&lt;/p&gt;&lt;p&gt;For me, the main elements that makes this tool sucessful and important are its simplicity, flexibility and design. During this project, I focused on the needs of users that usually have small networks and are not &lt;i&gt;computer experts&lt;/i&gt;. At the same time, it can handle more specific needs, such as the visualization of large networks and set up of the force directed layout.&lt;/p&gt;
@@ -45,11 +82,39 @@ hugo new site timer-hugo  and then go to the themes folder inside of timer-hugo 
     <item>
       <title>InteractiVenn</title>
       <link>https://heberleh.github.io/portfolio/interactivenn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Dec 1969 20:33:35 -0400</pubDate>
       
       <guid>https://heberleh.github.io/portfolio/interactivenn/</guid>
       <description>&lt;p&gt;InteractiVenn is a web-system for the visual analysis of lists of elements through Venn diagrams. Its main feature is the capability of allowing union operations between sets while keeping the visual map of the diagram. That is, when we perform the union of 2 sets, instead of going from a diagram with 3 circles to a diagram with 2 circles, we maintain the layout and apply the union to the shapes as well.&lt;/p&gt; &lt;p&gt;The published article was considered highly cited already in its initial 1-2 years. The tool have many access daily and facilitate the analysis of many scientist and other professionals. I think what makes this tool incredible is its simplicity and clean design, easy to use and extremely usefull.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Recursive Feature Addition</title>
+      <link>https://heberleh.github.io/portfolio/rfa/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:35 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/rfa/</guid>
+      <description>RFA or Recursive Feature Addition is a tool I implemented to substitute the RFE (recursive feature elimination). It has shown to be more accurate and stable than RFE when the variables are correlated and you still need them to participate in the feature selection process. RFA was tested in the context of cancer biomarkers in Discovery Proteomics.</description>
+    </item>
+    
+    <item>
+      <title>VisPipeline-MultiNetwork</title>
+      <link>https://heberleh.github.io/portfolio/multinetwork/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:34 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/multinetwork/</guid>
+      <description>&lt;p&gt;VisPipeline-MultiNetwork is a desktop application for comparison of networks. The algorithms were developed in a Visualization framework that implements many features for visualization assessment and research, the VisPipeline.&lt;/p&gt;&lt;p&gt;The extension I built explore the idea of merging multiple networks into an all-in-one network. The visualization is then performed by using force-directed layout and multidimensional projection based on attributes, such as the one that indicates in which networks the nodes are found. By implementing interactivity and integrating other visualization techniques, such as InteractiVenn and Convex hulls, the user can explore and go from overview to details on demand.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Social Network Analysis</title>
+      <link>https://heberleh.github.io/portfolio/social-networks/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:32 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/social-networks/</guid>
+      <description>In this projected I migrated a system writen in java to a new architechrure and assessed our algorithm for multidimensional projection in the context of social networks. The placement algorithm can use node&#39;s attributes and connectivity pattern to position the network according to the node&#39;s similarities. The meaning of similarity depends on the context and is flexible to the user to choose which attributes/edges are used to compute it.</description>
     </item>
     
   </channel>

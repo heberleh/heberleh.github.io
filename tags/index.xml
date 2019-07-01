@@ -6,17 +6,98 @@
     <description>Recent content in Tags on | Henry Heberle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Jul 2018 12:22:40 +0600</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://heberleh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>install</title>
-      <link>https://heberleh.github.io/tags/install/</link>
-      <pubDate>Sun, 08 Jul 2018 12:22:40 +0600</pubDate>
+      <title>bar chart</title>
+      <link>https://heberleh.github.io/tags/bar-chart/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://heberleh.github.io/tags/install/</guid>
+      <guid>https://heberleh.github.io/tags/bar-chart/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comics</title>
+      <link>https://heberleh.github.io/tags/comics/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/tags/comics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>d3js</title>
+      <link>https://heberleh.github.io/tags/d3js/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/tags/d3js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://heberleh.github.io/tags/javascript/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://heberleh.github.io/tags/react/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>https://heberleh.github.io/tags/sql/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alasql</title>
+      <link>https://heberleh.github.io/tags/alasql/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/tags/alasql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://heberleh.github.io/tags/database/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wikidata</title>
+      <link>https://heberleh.github.io/tags/wikidata/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/tags/wikidata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wikipedia</title>
+      <link>https://heberleh.github.io/tags/wikipedia/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/tags/wikipedia/</guid>
       <description></description>
     </item>
     

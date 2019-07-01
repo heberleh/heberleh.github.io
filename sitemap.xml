@@ -3,6 +3,88 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://heberleh.github.io/blog/integrating-d3-and-react/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/bar-chart/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/comics/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/d3js/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/javascript/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/react/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/sql/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/</loc>
+    <lastmod>2019-06-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/blog/marvel-database/</loc>
+    <lastmod>2019-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/alasql/</loc>
+    <lastmod>2019-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/database/</loc>
+    <lastmod>2019-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/wikidata/</loc>
+    <lastmod>2019-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/tags/wikipedia/</loc>
+    <lastmod>2019-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://heberleh.github.io/blog/</loc>
     <lastmod>2018-07-15T12:32:37+06:00</lastmod>
   </url>
@@ -33,44 +115,53 @@
   </url>
   
   <url>
-    <loc>https://heberleh.github.io/blog/a-tool-for-multidimensional-projection-assessment/</loc>
-    <lastmod>2018-07-12T16:56:54+06:00</lastmod>
+    <loc>https://heberleh.github.io/portfolio/proteins-stability/</loc>
+    <lastmod>1969-12-31T20:33:39-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://heberleh.github.io/</loc>
-    <lastmod>2018-07-12T16:56:54+06:00</lastmod>
-    <priority>0</priority>
+    <loc>https://heberleh.github.io/portfolio/secretome/</loc>
+    <lastmod>1969-12-31T20:33:39-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://heberleh.github.io/blog/installation/</loc>
-    <lastmod>2018-07-08T12:22:40+06:00</lastmod>
+    <loc>https://heberleh.github.io/portfolio/nature/</loc>
+    <lastmod>1969-12-31T20:33:38-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://heberleh.github.io/tags/</loc>
-    <lastmod>2018-07-08T12:22:40+06:00</lastmod>
-    <priority>0</priority>
+    <loc>https://heberleh.github.io/portfolio/supertrees/</loc>
+    <lastmod>1969-12-31T20:33:38-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://heberleh.github.io/tags/install/</loc>
-    <lastmod>2018-07-08T12:22:40+06:00</lastmod>
-    <priority>0</priority>
+    <loc>https://heberleh.github.io/portfolio/cellnetvis/</loc>
+    <lastmod>1969-12-31T20:33:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/portfolio/interactivenn/</loc>
+    <lastmod>1969-12-31T20:33:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/portfolio/rfa/</loc>
+    <lastmod>1969-12-31T20:33:35-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/portfolio/multinetwork/</loc>
+    <lastmod>1969-12-31T20:33:34-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://heberleh.github.io/portfolio/social-networks/</loc>
+    <lastmod>1969-12-31T20:33:32-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://heberleh.github.io/categories/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://heberleh.github.io/portfolio/cellnetvis/</loc>
-  </url>
-  
-  <url>
-    <loc>https://heberleh.github.io/portfolio/interactivenn/</loc>
   </url>
   
 </urlset>

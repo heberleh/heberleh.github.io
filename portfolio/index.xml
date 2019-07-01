@@ -12,9 +12,48 @@
     
     
     <item>
+      <title>Feature Selection &amp; Stability</title>
+      <link>https://heberleh.github.io/portfolio/proteins-stability/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/proteins-stability/</guid>
+      <description>&lt;p&gt;In this project I proposed the use of frequency of features (proteins) in good positions in ranks as an approach for feature selection in the context of Discovery Proteomics for Biomarkers research. These field usually have high-dimensional dataset with a much smaller number of samples.&lt;/p&gt;&lt;p&gt;I have used controlled samples in which proteins were added in different concentrations in different conditions: cancer, tumor removed and no-cancer. The biological experiments were developed by our collaborators from the Brazilian Bioscience National Laboratory. Proteins had their intensities quantified through Discovery Proteomics methods.&lt;/p&gt;&lt;p&gt;My method was capable of selecting the true markers and reveal information about instability of Discovery Proteomics and feature selection methods applied to this type of data. Visualization is of great importance for this category of work, once the experts are fundamental key and need to take decisions considering the high probability of bias and false discovery rate caused by the contrast between the number of samples and the number of variables in the dataset.&lt;/p&gt;&lt;p&gt;All results and research done is reported in my Doctoral dissertation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Feature Selection, ML &amp; Stats</title>
+      <link>https://heberleh.github.io/portfolio/secretome/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/secretome/</guid>
+      <description>&lt;p&gt;In this project I implemented a pipeline in R to rank and select proteins based on three different Machine Learning ranking approaches: multivariate, univariate and semi-multivariate. The methods were SVM-RFE, Beta-Binomial and NSC. The project was developed in colaboration with the Brazilian Biosciences National Laboratory and experts from different fields. &lt;/p&gt;&lt;p&gt; The dataset was a result from a Discovery Proteomics quantification, which resulted in a high number of variables and low number of samples. For this reason, we implemented the  multivariate and semi-multivariate classifiers/rankers in a Double Cross Validation scheme.&lt;/p&gt;&lt;p&gt;Multidimensional projection and trees visualization helped us to understand the data and the results.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Feature Selection &amp; Biomarkers</title>
+      <link>https://heberleh.github.io/portfolio/nature/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:38 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/nature/</guid>
+      <description>&lt;p&gt;In this project we evaluated proteins candidates for oral cancer biormarkers. Among many analysis and approaches involving discovery and targeted proteomics, in collaboration with the Brazilian Bioscience National Laboratory, I applied statistical and machine learning tools to evaluate the power of potential proteins and peptides candidates signatures to discriminate the N0/N+ oral cancer conditions explained in the article.&lt;/p&gt;&lt;p&gt;Our work was published in Nature Communications and appeared on radio, tv and magazines, and received an award for innovation integrating Computer Science methods and Biology for Health.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Supertrees Visualization</title>
+      <link>https://heberleh.github.io/portfolio/supertrees/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:38 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/supertrees/</guid>
+      <description>I developed sTVis during an internship at Dalhousie University (Halifax, Canada) under supervision of professor Dr. Robet Beiko. The web-system allows the user to explore a phylogenetic tree (supertree) by exploring the edges that connect the internal nodes. Each edge may represent shared genes and &lt;a href=&#39;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4055872/&#39;&gt;SPR moves&lt;/a&gt;.</description>
+    </item>
+    
+    <item>
       <title>CellNetVis</title>
       <link>https://heberleh.github.io/portfolio/cellnetvis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Dec 1969 20:33:37 -0400</pubDate>
       
       <guid>https://heberleh.github.io/portfolio/cellnetvis/</guid>
       <description>&lt;p&gt;CellNetVis is a web-tool for protein-protein network visualization and exploration. Its scientific article resulted in the &lt;b&gt;Best Paper Award&lt;/b&gt; during the BIOVIS 2017, in Prague. With this tool, biologists can explore the functional and structural mechanisms of a biological system by visualizing and exploring a biological network.&lt;/p&gt;&lt;p&gt;For me, the main elements that makes this tool sucessful and important are its simplicity, flexibility and design. During this project, I focused on the needs of users that usually have small networks and are not &lt;i&gt;computer experts&lt;/i&gt;. At the same time, it can handle more specific needs, such as the visualization of large networks and set up of the force directed layout.&lt;/p&gt;
@@ -24,11 +63,39 @@
     <item>
       <title>InteractiVenn</title>
       <link>https://heberleh.github.io/portfolio/interactivenn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Dec 1969 20:33:35 -0400</pubDate>
       
       <guid>https://heberleh.github.io/portfolio/interactivenn/</guid>
       <description>&lt;p&gt;InteractiVenn is a web-system for the visual analysis of lists of elements through Venn diagrams. Its main feature is the capability of allowing union operations between sets while keeping the visual map of the diagram. That is, when we perform the union of 2 sets, instead of going from a diagram with 3 circles to a diagram with 2 circles, we maintain the layout and apply the union to the shapes as well.&lt;/p&gt; &lt;p&gt;The published article was considered highly cited already in its initial 1-2 years. The tool have many access daily and facilitate the analysis of many scientist and other professionals. I think what makes this tool incredible is its simplicity and clean design, easy to use and extremely usefull.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Recursive Feature Addition</title>
+      <link>https://heberleh.github.io/portfolio/rfa/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:35 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/rfa/</guid>
+      <description>RFA or Recursive Feature Addition is a tool I implemented to substitute the RFE (recursive feature elimination). It has shown to be more accurate and stable than RFE when the variables are correlated and you still need them to participate in the feature selection process. RFA was tested in the context of cancer biomarkers in Discovery Proteomics.</description>
+    </item>
+    
+    <item>
+      <title>VisPipeline-MultiNetwork</title>
+      <link>https://heberleh.github.io/portfolio/multinetwork/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:34 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/multinetwork/</guid>
+      <description>&lt;p&gt;VisPipeline-MultiNetwork is a desktop application for comparison of networks. The algorithms were developed in a Visualization framework that implements many features for visualization assessment and research, the VisPipeline.&lt;/p&gt;&lt;p&gt;The extension I built explore the idea of merging multiple networks into an all-in-one network. The visualization is then performed by using force-directed layout and multidimensional projection based on attributes, such as the one that indicates in which networks the nodes are found. By implementing interactivity and integrating other visualization techniques, such as InteractiVenn and Convex hulls, the user can explore and go from overview to details on demand.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Social Network Analysis</title>
+      <link>https://heberleh.github.io/portfolio/social-networks/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:32 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/social-networks/</guid>
+      <description>In this projected I migrated a system writen in java to a new architechrure and assessed our algorithm for multidimensional projection in the context of social networks. The placement algorithm can use node&#39;s attributes and connectivity pattern to position the network according to the node&#39;s similarities. The meaning of similarity depends on the context and is flexible to the user to choose which attributes/edges are used to compute it.</description>
     </item>
     
   </channel>

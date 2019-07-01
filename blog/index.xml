@@ -12,24 +12,22 @@
     
     
     <item>
-      <title>Table Design</title>
-      <link>https://heberleh.github.io/blog/a-tool-for-multidimensional-projection-assessment/</link>
-      <pubDate>Thu, 12 Jul 2018 16:56:54 +0600</pubDate>
+      <title>React &amp; D3 stacked bar charts using the Comics Database</title>
+      <link>https://heberleh.github.io/blog/integrating-d3-and-react/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://heberleh.github.io/blog/a-tool-for-multidimensional-projection-assessment/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+      <guid>https://heberleh.github.io/blog/integrating-d3-and-react/</guid>
+      <description>This article is for who knows a bit of D3 and want to code in a React fashion. If you have no idea on how to code using React, I strongly recomend this 100% free interactive course on Scrimba. Here I show you how I created a stacked bar chart with tooltips to visualize one table from my easy javascript  Comics Database. I point out what are the core code-parts that make this version different from a regular D3 version based on enter(), exit() and update().</description>
     </item>
     
     <item>
-      <title>How To Setup Timer Hugo</title>
-      <link>https://heberleh.github.io/blog/installation/</link>
-      <pubDate>Sun, 08 Jul 2018 12:22:40 +0600</pubDate>
+      <title>Create a Marvel Database with SQL and Javascript - the easy way</title>
+      <link>https://heberleh.github.io/blog/marvel-database/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://heberleh.github.io/blog/installation/</guid>
-      <description>Install this template by following those simple steps: STEP-1 : Hugo installation Check this link below for install hugo on your computer. hugo install documentation
-STEP-2 : Create your project Hugo provides a new command to create a new website.
-hugo new site &amp;lt;new_project&amp;gt;  STEP-3 : Install the theme Run this command
-hugo new site timer-hugo  and then go to the themes folder inside of timer-hugo folder. You can also use this command cd timer-hugo/themes for going to this folder.</description>
+      <guid>https://heberleh.github.io/blog/marvel-database/</guid>
+      <description>I know, the image above is mostly about DC, but this post is not only about Marvel and Lena Rose did a great job taking this picture.
+In this post I explain how to create a Marvel Database (or a DC Database). For that, we will query data from Wikipedia and integrate it using Javascript and SQL. We will make a flexible tool that will allow you to create different tables to use in your projects.</description>
     </item>
     
   </channel>

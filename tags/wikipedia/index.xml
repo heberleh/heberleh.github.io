@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wikipedia on | Henry Heberle</title>
+    <link>https://heberleh.github.io/tags/wikipedia/</link>
+    <description>Recent content in wikipedia on | Henry Heberle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://heberleh.github.io/tags/wikipedia/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create a Marvel Database with SQL and Javascript - the easy way</title>
+      <link>https://heberleh.github.io/blog/marvel-database/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://heberleh.github.io/blog/marvel-database/</guid>
+      <description>I know, the image above is mostly about DC, but this post is not only about Marvel and Lena Rose did a great job taking this picture.
+In this post I explain how to create a Marvel Database (or a DC Database). For that, we will query data from Wikipedia and integrate it using Javascript and SQL. We will make a flexible tool that will allow you to create different tables to use in your projects.</description>
+    </item>
+    
+  </channel>
+</rss>
