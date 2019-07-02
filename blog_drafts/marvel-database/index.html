@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="description" content="In this post I explain how to create a Marvel database or a Marvel dataset using JavaScript and Wikipedia and Wikidata. For that we will use Alasql library and SQL commands. In fact, the database created here contains characters from other universes, such as DC Universe. Therefore, it is easy to change and create a DC SQL Database as well.">
+    <meta name="author" content="Henry Heberle">
+    <meta name="generator" content="Hugo 0.55.6" />
+    
+    <!-- Mobile Specific Metas -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create a Marvel Database with SQL and Javascript - the easy way</title>
+    <link rel="icon" href="https://heberleh.github.io/images/favicon.ico">
+
+    <!-- Twitter Bootstrs CSS -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/bootstrap/bootstrap.min.css">
+    <!-- Ionicons Fonts Css -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/ionicons/ionicons.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/animate-css/animate.css">
+    <!-- Hero area slider css-->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/slider/slider.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/slick/slick.css">
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/facncybox/jquery.fancybox.css">
+    <!-- hover -->
+    <link rel="stylesheet" href="https://heberleh.github.io/plugins/hover/hover-min.css">
+    <!-- template main css file -->
+    
+    <link rel="stylesheet" href="https://heberleh.github.io/css/style.min.css" integrity="" media="screen">
+    <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5cfbbff74351e9001264fc80&product=inline-follow-buttons"></script>
+
+    <script defer src= "https://heberleh.github.io/plugins/fontawesome-free-5.9.0-web/js/all.js"></script>
+
+</head>
+
+<body>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>    
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<section class="top-bar animated-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="https://heberleh.github.io">
+                        
+                        <p class='logo'><b>H</b>enry <b>H</b>eberle, PhD</p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://heberleh.github.io">Home</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="/publications">Publications</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://medium.com/@heberleh">Blog</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Contact</a>
+                            </li>
+                            
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>Create a Marvel Database with SQL and Javascript - the easy way</h2>
+                    <div class="portfolio-meta">
+                        <span>Friday, Jun 7, 2019</span>|
+                        <span> Tags:
+                            sql, database, javascript, wikipedia, wikidata, alasql
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="single-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                
+                <div class="post-img post-img-list">
+                    <img class="img-fluid" alt="" src="https://heberleh.github.io/images/blog/marvel-database/main.jpg">
+                </div>
+                
+                
+                <div class="post-content">
+                    
+
+<p>I know, the image above is mostly about DC, but this post is not only about Marvel and <a href="https://unsplash.com/@happilyabstract?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Lena Rose</a> did a great job taking this picture.</p>
+
+<p>In this post I explain how to create a <strong>Marvel Database</strong> (or a <strong>DC Database</strong>). For that, we will query data from <strong>Wikipedia</strong> and integrate it using Javascript and SQL. We will make a flexible tool that will allow you to create different tables to use in your projects. The concepts explained here can be extended for other subjects. This is a post for who doesn’t have time to learn the complex syntax of the <em>modified sql</em> used in the Wikidata system and still would like to play with their data.</p>
+
+<p><br></p>
+
+<h2 id="the-pipeline">The pipeline</h2>
+
+<p>The idea here is to go through the following steps to get a flexible database:</p>
+
+<ol>
+<li>Query tables from <strong>Wikidata</strong> and export as json files</li>
+<li>Create a <strong>Alasql</strong> database and insert the data from the json files</li>
+<li>Use the created database performing <strong>SQL queries</strong></li>
+</ol>
+
+<p><br></p>
+
+<h2 id="1-extracting-data-from-wikipedia">1. Extracting data from Wikipedia</h2>
+
+<p>Wikipedia has a great database and ontology behind it. You can access the query system by clicking here: <a href="https://w.wiki/4iP">https://w.wiki/4iP</a></p>
+
+<p>In the above link you will find something similar to this (and you will find more information about it there):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sparql" data-lang="sparql">    <span style="color:#66d9ef">SELECT</span> ?name ?gender ?genderLabel
+    <span style="color:#66d9ef">WHERE</span>{
+        ?name wdt:<span style="color:#f92672">P31</span> wd:<span style="color:#f92672">Q1114461</span>;
+            wdt:<span style="color:#f92672">P1080</span> wd:<span style="color:#f92672">Q931597</span>.
+        ?name wdt:<span style="color:#f92672">P21</span> ?gender.
+        <span style="color:#66d9ef">SERVICE</span> wikibase:<span style="color:#f92672">label</span> { bd:<span style="color:#f92672">serviceParam</span> wikibase:<span style="color:#f92672">language</span> <span style="color:#e6db74">&#34;[AUTO_LANGUAGE]&#34;</span>. }
+    }</code></pre></div>
+<p>In this code I am selecting entities that are instances of <em>comic character</em> and are in the <em>fictional universe</em> <em>Marvel Universe</em>. It may seem strange at first, but each of those codes are part of the Wikipedia Ontology. It is how they deal with redundancy and can organize and make everything work! But how can you create your own queries?</p>
+
+<p>First, <Ctrl+Space> will help you. Try typing <code>wdt:&lt;Ctrl+Space&gt;</code>. You notice that a helper tooltip pops up for you. Try typing <em>instance of</em>. You see that the code for <em>instance of</em> is <code>wdt:P31</code>. Using the same approach, now for a <em>value</em>, you will type <code>wdt:&lt;Ctrl+Space&gt;</code> (no t this time!) and <em>comic character</em>, enter, and voilà, you got the code <code>wd:Q1114461</code>.</p>
+
+<p><img class="img-fluid" style="margin: 20px" src="../../images/blog/marvel-database/query-service.png"></p>
+
+<!-- float: right;  -->
+
+<p><em>Okay, Henry, but I have no idea about what we can use, I don&rsquo;t have time to learn the Wikipedia language&hellip;</em> and I understand you! So, to overcome this we will open this page here <a href="https://www.wikidata.org/wiki/Q841372">Juggernaut </a>. This is the Wikipedia item code Q841372, the Juggernaut! Now look and check what are the information available for a <em>comic character</em>. Put your mouse pointer over the items in the Statements Section. For example, if you put your mouse over &ldquo;instance of&rdquo; you will get the P31 code! Since it is not a value, use <code>wdt</code> for this one. By browsing that page you get a good idea about what are the properties you can use.
+Pause: If you want to create a database but don’t know yet about what it will be, try the <a href="https://en.wikipedia.org/wiki/Special:Random">Random article</a> function to get insights.
+We can do the same thing for ANY Wikipedia page. Go to the official Wikipedia website and search for anything, let&rsquo;s say&hellip; <a href="https://en.wikipedia.org/wiki/Aluminium">Aluminium</a>. Now check the left-side bar and look for <strong>Wikidata item</strong> link.</p>
+
+<p><img class="img-fluid" style="margin: 20px" src="../../images/blog/marvel-database/wiki-item.png"></p>
+
+<p>Click, and voilà, it shows all the attributes for this item. We see we get the <strong>mass</strong> by using <code>wdt:P2067</code>, and many other attributes that may apply for other types of metal.</p>
+
+<p><img class="img-fluid" style="margin: 20px" src="../../images/blog/marvel-database/wiki-item-property.png"></p>
+
+<p>Now that we have the Wikidata, we will:</p>
+
+<ol>
+<li>Create a query for an attribute of interest</li>
+<li>Download the result as .json</li>
+<li>Always track the IDs (Wikidata item URL) and Labels</li>
+</ol>
+
+<p>For instance, I created one query for gender. One query for occupation, and so on. The result is a folder with many .json files I will load in my database formed by many tables. You could perform a single query with all the information. In my case, I want it to be malleable, so I can perform JOIN, LEFT JOING, and other SELECT commands to get different tables.</p>
+
+<p>In fact, instead of getting only Marvel Universe, I discarded that filter and got a full database of instances of Comics Characters. So in my json files, you find Marvel, DC, and others. The resulting jsons are found in my <a href="https://github.com/heberleh/comics-characters-js-database">Github page</a>. Next, I will show how I used the json files with an <strong>easy</strong> SQL DB in Javascript.</p>
+
+<p>For more complex queries or handling lists, please refer to the <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata website</a>. Another good option is the <em>Help</em> button at the top of the <a href="https://query.wikidata.org/">Wikidata Query Service</a> where you can find examples and support.</p>
+
+<h2 id="2-creating-an-sql-database-in-javascript">2. Creating an SQL Database in Javascript</h2>
+
+<p>Now that we have the json files, let&rsquo;s insert them into our SQL Database. For this, we will use a tool named <a href="https://github.com/agershun/alasql">Alasql</a>. With Alasql, you can load data and create tables in different manners (<a href="https://github.com/agershun/alasql/wiki">read more here</a>).</p>
+
+<p>Here, since we have the jsons from Wikidata, we will apply a SELECT on each json (file) and insert into a new table in our database for easy access. For simplification, my code will contain only two tables; you can find the complete version in the <a href="https://github.com/heberleh/comics-characters-js-database">Github page</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#75715e">// Partial code - check my github to get the complete one
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">alasql</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;alasql&#39;</span>
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">character</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;../dataset/character.json&#39;</span>);
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">abilities</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;../dataset/abilities.json&#39;</span>);
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fictionalUniverse</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;../dataset/fictionalUniverse.json&#39;</span>);
+
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">MarvelDB</span>(){
+
+        <span style="color:#75715e">// Our jsons and table names
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tables</span> <span style="color:#f92672">=</span> [
+            {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;abilities&#39;</span>, <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">abilities</span>},
+            {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;character&#39;</span>, <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">character</span>}
+        ]
+
+        <span style="color:#75715e">// Create database
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">alasql</span>.<span style="color:#a6e22e">Database</span>()
+
+        <span style="color:#75715e">// Only characters registered in the Marvel Universe
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">&#39;CREATE TABLE fictionalUniverse&#39;</span>)
+        <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">&#39;INSERT INTO fictionalUniverse\
+</span><span style="color:#e6db74">                    SELECT char FROM ? \
+</span><span style="color:#e6db74">                    WHERE fictionalUniverseLabel LIKE &#34;Marvel Universe&#34;&#39;</span>, [<span style="color:#a6e22e">fictionalUniverse</span>])
+
+        <span style="color:#75715e">// For each Json in &#39;tables&#39;, create table
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">tables</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">table</span> =&gt; {
+            <span style="color:#75715e">// Creates temporary table (Should not be necessary, 
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// but because of bugs caused by nesting INSERT INTO with SELECT WHERE IN,)
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// I kept it like this:
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">`CREATE TABLE aux_</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+            <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">`INSERT INTO aux_</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> SELECT * FROM ?`</span>, [<span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">data</span>]);
+            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">filtered_data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">`SELECT * FROM aux_</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                                            WHERE aux_</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.char IN</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                                            (SELECT char FROM fictionalUniverse)`</span>);
+
+            <span style="color:#75715e">// Then when can create our table
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">`CREATE TABLE </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+            <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">`INSERT INTO </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> SELECT * FROM ?`</span>, [<span style="color:#a6e22e">filtered_data</span>]);
+
+            <span style="color:#75715e">// and delete the temporary one
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">`DROP TABLE  aux_</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+        })
+
+        <span style="color:#75715e">// Drop fictionalUniverse table -&gt; character table contains the same elements
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">&#39;DROP TABLE fictionalUniverse&#39;</span>)
+
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">db</span>
+    }
+</code></pre></div>
+<p>And we are set. We have a database and can use it by calling <code>let mydb = MarvelDB()</code> and apply SQL commands like this: <code>mydb.exec('SELECT DISTINCT abilityLabel from abilities')</code>.</p>
+
+<h2 id="3-final-code-and-usage">3. Final code and usage</h2>
+
+<p>I defined some tests to make sure everything was working. It exemplifies the usage of our database. If you are not used to testing, just consider the <code>let result = this.db.exec(...)</code> and <code>console.table(result)</code> in the code below and ignore the other parts.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#75715e">// Unit test
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;Select Queries&#39;</span>, <span style="color:#66d9ef">function</span>() {
+
+        <span style="color:#a6e22e">beforeEach</span>(() =&gt; <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">marvelDB</span>())
+
+        <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;Name of the only agender with registered abilities&#39;</span>, () =&gt; {
+            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">exec</span>(
+               <span style="color:#e6db74">&#39;SELECT DISTINCT character.charLabel AS name\
+</span><span style="color:#e6db74">                FROM character JOIN gender ON character.char = gender.char\
+</span><span style="color:#e6db74">                JOIN abilities ON character.char = abilities.char\
+</span><span style="color:#e6db74">                WHERE gender.genderLabel LIKE &#34;agender&#34;&#39;</span>);
+            <span style="color:#75715e">//console.table(result);
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">result</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">name</span>).<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">equal</span>(<span style="color:#e6db74">&#34;Phoenix Force&#34;</span>)
+        });
+</code></pre></div>
+<p>The above <code>SELECT</code> returns the column <code>charLabel</code> and renames to <code>name</code>. It also joins the tables character, gender and abilities, making sure the entries have the same character id (<code>char</code>). Finally, it filters by a specific gender named <em>agender</em>. For more examples on this database, please go to the <a href="https://github.com/heberleh/comics-characters-js-database">Github page</a> - don&rsquo;t forget to star it :)</p>
+
+<p><br>
+<br></p>
+
+<div style="text-align: 'right'">
+    <div class="social">
+        <span class="twitter">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+        </span>
+        <span class="Facebook">
+        <div class="fb-share-button" data-href="https://heberleh.github.io/blog/marvel-database/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fheberleh.github.io%2Fblog%2Fmarvel-database%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        </span>
+    </div>
+</div>
+
+                    <p style="text-align: right">Henry Heberle, PhD.</p>
+                    <p style="text-align: right">Data Visualization Engineer / Data Scientist</p>
+                    <div class="sharethis-inline-follow-buttons"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Call To Action Section Start -->
+<section id="call-to-action">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO WHAT YOU THINK ?</h1>
+                    <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Let me know if I can help you in any way. I am open to colaboarions and I am currently looking for a job in Canada.</p>
+                    <a href="/contact" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact with me</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Call To Action Section End -->
+
+
+<!-- Footer Section Start -->
+<footer id="footer">
+    <div class="container">
+        <div class="row content-justify-between">
+            <div class="col-md-8 col-12 text-center text-lg-left text-md-left">
+                <p class="copyright">Copyright:
+                    <span>
+                        <script>document.write(new Date().getFullYear())</script>
+                    </span> <b>Henry Heberle</b>.
+                    <br> Powered by  <a href="http://www.Themefisher.com" target="_blank">Themefisher</a> and <a href="https://gohugo.io/">Hugo</a>.
+                </p>
+            </div>
+            <div class="col-md-4 col-12">
+                <!-- Social Media -->
+                <ul class="social text-center text-md-right text-lg-right">
+                    
+                    <li>
+                        <a href="https://twitter.com/h_heberle" class="twitter">
+                            <i class="ion-social-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/enryh/" class="linkedin">
+                            <i class="ion-social-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/heberleh" class="github">
+                            <i class="ion-social-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer section end -->
+
+<!-- jquery -->
+<script src="https://heberleh.github.io/plugins/jQurey/jquery.min.js"></script>
+<!-- Form Validation -->
+<script src="https://heberleh.github.io/plugins/form-validation/jquery.form.js"></script>
+<script src="https://heberleh.github.io/plugins/form-validation/jquery.validate.min.js"></script>
+<!-- slick slider -->
+<script src="https://heberleh.github.io/plugins/slick/slick.min.js"></script>
+<!-- bootstrap js -->
+<script src="https://heberleh.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- wow js -->
+<script src="https://heberleh.github.io/plugins/wow-js/wow.min.js"></script>
+<!-- slider js -->
+<script src="https://heberleh.github.io/plugins/slider/slider.js"></script>
+<!-- Fancybox -->
+<script src="https://heberleh.github.io/plugins/facncybox/jquery.fancybox.js"></script>
+<!-- template main js -->
+
+<script src="https://heberleh.github.io/js/script.min.js"></script>
+<!-- google analitycs -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+
+</html>
