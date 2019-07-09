@@ -41,12 +41,32 @@ In this post I explain how to create a Marvel Database (or a DC Database). For t
     </item>
     
     <item>
-      <title>Feature Selection, ML &amp; Stats</title>
-      <link>https://heberleh.github.io/portfolio/secretome/</link>
+      <title>Marvel &amp; DC Visualization</title>
+      <link>https://heberleh.github.io/portfolio/comics_universe/</link>
       <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
       
-      <guid>https://heberleh.github.io/portfolio/secretome/</guid>
-      <description>&lt;p&gt;In this project I implemented a pipeline in R to rank and select proteins based on three different Machine Learning ranking approaches: multivariate, univariate and semi-multivariate. The methods were SVM-RFE, Beta-Binomial and NSC. The project was developed in colaboration with the Brazilian Biosciences National Laboratory and experts from different fields. &lt;/p&gt;&lt;p&gt; The dataset was a result from a Discovery Proteomics quantification, which resulted in a high number of variables and low number of samples. For this reason, we implemented the  multivariate and semi-multivariate classifiers/rankers in a Double Cross Validation scheme.&lt;/p&gt;&lt;p&gt;Multidimensional projection and trees visualization helped us to understand the data and the results.&lt;/p&gt;
+      <guid>https://heberleh.github.io/portfolio/comics_universe/</guid>
+      <description>&lt;p&gt;&lt;p&gt;In this personal project I developed an interactive visualization tool for the visualization of comic characters from Marvel and DC. I integrated D3js and React to build the components that creates this visualization &lt;b&gt;&lt;a href=&#39;https://heberleh.github.io/comics-universe/&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;&lt;a href=&#34;https://heberleh.github.io/comics-universe/&#34;&gt;https://heberleh.github.io/comics-universe/&lt;/a&gt;&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;I also published articles in &lt;b&gt;&lt;a href=&#39;https://towardsdatascience.com/&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Towards Data Science&lt;/a&gt;&lt;/b&gt; about the process of extracting data, creating React components and about the final visualization:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#39;https://towardsdatascience.com/create-a-marvel-database-with-sql-and-javascript-the-easy-way-573ccdf44673?source=friends_link&amp;sk=ab25c1c127b6ace5f12da0d13ac6ca62&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Create a Marvel Database with SQL and Javascript, the easy way&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;https://towardsdatascience.com/visualizing-comic-characters-genders-and-superpowers-ae7c2311cb89?source=friends_link&amp;sk=f0971043400e9015db34f3f9ee711ebd&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Visualizing Comic Characters’ Genders and Superpowers&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;https://heberleh.github.io/comics-universe/&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;to appear&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tableau Dashboard - Vehicles</title>
+      <link>https://heberleh.github.io/portfolio/sues_choice_of_car/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/sues_choice_of_car/</guid>
+      <description>&lt;p&gt;In this project I created a Tableau Dashboard to answer which vehicle are the best choice for Sue. I created the Persona and all the documentation to design and implement the visualization to best fit the fictional customer needs. These are the related documents in PDF:&lt;/p&gt;&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#39;images/portfolio/tableau-sue-car/1_Visualization_Design__Who_What_Why_How.pdf&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Visualization Design: Who, What, Why and How &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;images/portfolio/tableau-sue-car/2_Visualization_Design__Story_Arc.pdf&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Visualization Design: Story Arc &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;images/portfolio/tableau-sue-car/3_Visualization_Design__Principles_and_Choices.pdf&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Visualization Design: Principles and Choices&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Click here to see the interactive project: &lt;b&gt;&lt;a href=&#39;https://public.tableau.com/profile/henry.heberle#!/vizhome/Choosingyourvehicle/VehiclerecommendationforSue&#39;&gt;Tableau Public&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tableau Story - Pesticides in Brazil&#39;s Water</title>
+      <link>https://heberleh.github.io/portfolio/pesticides-rs/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/pesticides-rs/</guid>
+      <description>&lt;p&gt;In this project I created a Tableau Story to explain pesticides&#39; concentrations in water and suggest a first step for further analysis. I reported the extreme concentrations in some cities in Rio Grande do Sul (RS) state.&lt;/p&gt;&lt;p&gt;Click here to see the interactive project: &lt;b&gt;&lt;a href=&#39;https://public.tableau.com/profile/henry.heberle#!/vizhome/PesticideSafetyinBrazil-WheretoactFinal/PesticidesinBrazil-PrioritizingActions&#39;&gt;Tableau Public&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -76,6 +96,16 @@ In this post I explain how to create a Marvel Database (or a DC Database). For t
       
       <guid>https://heberleh.github.io/portfolio/cellnetvis/</guid>
       <description>&lt;p&gt;CellNetVis is a web-tool for protein-protein network visualization and exploration. Its scientific article resulted in the &lt;b&gt;Best Paper Award&lt;/b&gt; during the BIOVIS 2017, in Prague. With this tool, biologists can explore the functional and structural mechanisms of a biological system by visualizing and exploring a biological network.&lt;/p&gt;&lt;p&gt;For me, the main elements that makes this tool sucessful and important are its simplicity, flexibility and design. During this project, I focused on the needs of users that usually have small networks and are not &lt;i&gt;computer experts&lt;/i&gt;. At the same time, it can handle more specific needs, such as the visualization of large networks and set up of the force directed layout.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Feature Selection, ML &amp; Stats</title>
+      <link>https://heberleh.github.io/portfolio/secretome/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:35 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/secretome/</guid>
+      <description>&lt;p&gt;In this project I implemented a pipeline in R to rank and select proteins based on three different Machine Learning ranking approaches: multivariate, univariate and semi-multivariate. The methods were SVM-RFE, Beta-Binomial and NSC. The project was developed in colaboration with the Brazilian Biosciences National Laboratory and experts from different fields. &lt;/p&gt;&lt;p&gt; The dataset was a result from a Discovery Proteomics quantification, which resulted in a high number of variables and low number of samples. For this reason, we implemented the  multivariate and semi-multivariate classifiers/rankers in a Double Cross Validation scheme.&lt;/p&gt;&lt;p&gt;Multidimensional projection and trees visualization helped us to understand the data and the results.&lt;/p&gt;
 </description>
     </item>
     
