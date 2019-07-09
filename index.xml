@@ -31,6 +31,16 @@ In this post I explain how to create a Marvel Database (or a DC Database). For t
     </item>
     
     <item>
+      <title>Assessment of ML Models and Features</title>
+      <link>https://heberleh.github.io/portfolio/features_assessment/</link>
+      <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
+      
+      <guid>https://heberleh.github.io/portfolio/features_assessment/</guid>
+      <description>&lt;p&gt;In this project I evaluated many regression models created by using different algorithms and sets of features and the Ames Dataset.&lt;/p&gt;&lt;p&gt;The plot shows what were the worse combinations of algorithms and features sets, as well as how far if the testing error from the training one.&lt;/p&gt;&lt;p&gt;Click here to see the interactive project: &lt;b&gt;&lt;a href=&#39;https://public.tableau.com/profile/henry.heberle#!/vizhome/VisualizationforFeatureSelectionAssessment/Dashboard1&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Tableau Public&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Feature Selection &amp; Stability</title>
       <link>https://heberleh.github.io/portfolio/proteins-stability/</link>
       <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
@@ -56,7 +66,7 @@ In this post I explain how to create a Marvel Database (or a DC Database). For t
       <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
       
       <guid>https://heberleh.github.io/portfolio/sues_choice_of_car/</guid>
-      <description>&lt;p&gt;In this project I created a Tableau Dashboard to answer which vehicle are the best choice for Sue. I created the Persona and all the documentation to design and implement the visualization to best fit the fictional customer needs. These are the related documents in PDF:&lt;/p&gt;&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#39;images/portfolio/tableau-sue-car/1_Visualization_Design__Who_What_Why_How.pdf&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Visualization Design: Who, What, Why and How &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;images/portfolio/tableau-sue-car/2_Visualization_Design__Story_Arc.pdf&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Visualization Design: Story Arc &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;images/portfolio/tableau-sue-car/3_Visualization_Design__Principles_and_Choices.pdf&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Visualization Design: Principles and Choices&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Click here to see the interactive project: &lt;b&gt;&lt;a href=&#39;https://public.tableau.com/profile/henry.heberle#!/vizhome/Choosingyourvehicle/VehiclerecommendationforSue&#39;&gt;Tableau Public&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;In this project I created a Tableau Dashboard to answer which vehicle are the best choice for Sue. I created the Persona and all the documentation to design and implement the visualization to best fit the fictional customer needs. These are the related documents in PDF:&lt;/p&gt;&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&#39;images/portfolio/tableau-sue-car/1_Visualization_Design__Who_What_Why_How.pdf&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Visualization Design: Who, What, Why and How &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;images/portfolio/tableau-sue-car/2_Visualization_Design__Story_Arc.pdf&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Visualization Design: Story Arc &lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#39;images/portfolio/tableau-sue-car/3_Visualization_Design__Principles_and_Choices.pdf&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Visualization Design: Principles and Choices&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Click here to see the interactive project: &lt;b&gt;&lt;a href=&#39;https://public.tableau.com/profile/henry.heberle#!/vizhome/Choosingyourvehicle/VehiclerecommendationforSue&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Tableau Public&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -66,7 +76,7 @@ In this post I explain how to create a Marvel Database (or a DC Database). For t
       <pubDate>Wed, 31 Dec 1969 20:33:39 -0400</pubDate>
       
       <guid>https://heberleh.github.io/portfolio/pesticides-rs/</guid>
-      <description>&lt;p&gt;In this project I created a Tableau Story to explain pesticides&#39; concentrations in water and suggest a first step for further analysis. I reported the extreme concentrations in some cities in Rio Grande do Sul (RS) state.&lt;/p&gt;&lt;p&gt;Click here to see the interactive project: &lt;b&gt;&lt;a href=&#39;https://public.tableau.com/profile/henry.heberle#!/vizhome/PesticideSafetyinBrazil-WheretoactFinal/PesticidesinBrazil-PrioritizingActions&#39;&gt;Tableau Public&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;In this project I created a Tableau Story to explain pesticides&#39; concentrations in water and suggest a first step for further analysis. I reported the extreme concentrations in some cities in Rio Grande do Sul (RS) state.&lt;/p&gt;&lt;p&gt;Click here to see the interactive project: &lt;b&gt;&lt;a href=&#39;https://public.tableau.com/profile/henry.heberle#!/vizhome/PesticideSafetyinBrazil-WheretoactFinal/PesticidesinBrazil-PrioritizingActions&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Tableau Public&lt;/a&gt;&lt;/b&gt;.&lt;/p&gt;
 </description>
     </item>
     
